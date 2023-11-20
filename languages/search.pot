@@ -1,0 +1,16 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: src/init.ts:69
+#: src/search.ts:69
+msgid "Sorry, no results found"
+msgstr ""
+
+#: src/init.ts:77
+#: src/search.ts:78
+msgid "Please add %s more characters"
+msgid_plural "Please add %s more character"
+msgstr[0] ""
+msgstr[1] ""

@@ -1,0 +1,11 @@
+{
+	"apiVersion": 2,
+	"name": "block/search",
+	"title": "search",
+	"description": "A wp-block search in typescript",
+	"keywords": [ "wp-block", "search" ],
+	"category": "media",
+	"editorScript": "file:./build/search.js",
+	"editorStyle": "file:./build/search.css",
+	"style": "file:./build/style-search.css"
+}
