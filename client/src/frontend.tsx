@@ -11,8 +11,8 @@ initSearchModal();
 event is fired when the initial HTML document has been completely loaded and parsed, without waiting
 for stylesheets, images, and subframes to finish loading. */
 document.addEventListener('DOMContentLoaded', function () {
-	// get all the search blocks
-	const searchBlocks = document.querySelectorAll('.wp-block-search-block');
+  // get all the search blocks
+  const searchBlocks = document.querySelectorAll('.wp-block-search-block');
 
-	searchBlocks.forEach(initLiveSearch);
+  searchBlocks.forEach(initLiveSearch);
 });

@@ -1,0 +1,12 @@
+parameters:
+    level: 5
+    paths:
+        - server/src
+        - server/tests
+    scanFiles:
+        - vendor/wordpress/wordpress/src/wp-includes/compat.php
+        - vendor/php-stubs/wordpress-tests-stubs/wordpress-tests-stubs.php
+        - vendor/php-stubs/wp-cli-stubs/wp-cli-stubs.php
+        - vendor/php-stubs/wp-cli-stubs/wp-cli-commands-stubs.php
+        - vendor/php-stubs/wp-cli-stubs/wp-cli-i18n-stubs.php
+

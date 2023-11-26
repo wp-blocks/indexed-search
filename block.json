@@ -1,11 +1,12 @@
 {
-	"apiVersion": 2,
-	"name": "block/search",
-	"title": "search",
-	"description": "A wp-block search in typescript",
-	"keywords": [ "wp-block", "search" ],
-	"category": "media",
-	"editorScript": "file:./build/search.js",
-	"editorStyle": "file:./build/search.css",
-	"style": "file:./build/style-search.css"
+  "apiVersion": 2,
+  "name": "wp-blocks/search",
+  "title": "search",
+  "description": "An advanced search block",
+  "keywords": ["block", "search"],
+  "category": "media",
+  "editorScript": "file:./build/search.js",
+  "editorStyle": "file:./build/search.css",
+  "viewScript": "file:./build/frontend.js",
+  "style": "file:./build/style-search.css"
 }

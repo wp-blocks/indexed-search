@@ -1,3 +1,3 @@
 # Search
 
-A WordPress search block.
+An advanced WordPress search block.

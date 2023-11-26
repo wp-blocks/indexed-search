@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Search Block
  * Plugin URI: https://github.com/wp-blocks/search
- * Description: WordPress block search in typescript
- * Version: 0.0.1
+ * Description: An advanced WordPress block search
+ * Version: 0.1.0
  * Author: codekraft, johnhooks
  */
 // Defines the path to the main plugin file.

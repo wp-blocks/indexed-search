@@ -15,6 +15,7 @@ artifacts
 
 # Dependency directories
 node_modules/
+vendor/
 
 # Optional npm cache directory
 .npm
@@ -31,5 +32,11 @@ node_modules/
 # dotenv environment variables file
 .env
 
-# Jetbrains editor config
+# Editor configs
 .idea
+.vscode
+
+# Cache files
+.phpunit.cache
+.phpunit.result.cache
+.php-cs-fixer.cache

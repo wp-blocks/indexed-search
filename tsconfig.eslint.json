@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "allowJs": true
+  },
+  "include": [
+    ".eslintrc.cjs",
+    ".prettierrc.cjs",
+    "jest.config.base.cjs",
+    "jest.config.cjs",
+    "lint-staged.config.cjs",
+    "webpack.config.cjs"
+  ]
+}

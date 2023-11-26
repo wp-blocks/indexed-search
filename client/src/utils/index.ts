@@ -7,16 +7,16 @@ import apiFetch from '@wordpress/api-fetch';
  *                  is the parent element that will contain the spinner element.
  */
 export function showSpinner(container: HTMLElement): void {
-	// Create and append spinner element
-	const hasSpinner = container.querySelector('.spinner');
-	if (!hasSpinner) {
-		const spinner = document.createElement('div');
-		spinner.style.margin = '36px auto';
-		spinner.style.textAlign = 'center';
-		spinner.innerHTML =
-			'<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25"/><path d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z"><animateTransform attributeName="transform" type="rotate" dur="0.75s" values="0 12 12;360 12 12" repeatCount="indefinite"/></path></svg>';
-		container.appendChild(spinner);
-	}
+  // Create and append spinner element
+  const hasSpinner = container.querySelector('.spinner');
+  if (!hasSpinner) {
+    const spinner = document.createElement('div');
+    spinner.style.margin = '36px auto';
+    spinner.style.textAlign = 'center';
+    spinner.innerHTML =
+      '<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25"/><path d="M10.14,1.16a11,11,0,0,0-9,8.92A1.59,1.59,0,0,0,2.46,12,1.52,1.52,0,0,0,4.11,10.7a8,8,0,0,1,6.66-6.61A1.42,1.42,0,0,0,12,2.69h0A1.57,1.57,0,0,0,10.14,1.16Z"><animateTransform attributeName="transform" type="rotate" dur="0.75s" values="0 12 12;360 12 12" repeatCount="indefinite"/></path></svg>';
+    container.appendChild(spinner);
+  }
 }
 
 /**
@@ -26,11 +26,11 @@ export function showSpinner(container: HTMLElement): void {
  *                  the parent element of the spinner element that you want to remove.
  */
 export function hideSpinner(container: HTMLElement): void {
-	// Remove spinner element
-	const spinner = container.querySelector('.spinner');
-	if (spinner) {
-		spinner.remove();
-	}
+  // Remove spinner element
+  const spinner = container.querySelector('.spinner');
+  if (spinner) {
+    spinner.remove();
+  }
 }
 
 /**
@@ -45,13 +45,13 @@ export function hideSpinner(container: HTMLElement): void {
  * (fn) after a specified delay (delay) has passed.
  */
 export const debounce = (fn: (searchTerm) => void, delay: number) => {
-	let timerId;
-	return (...args) => {
-		clearTimeout(timerId);
-		timerId = setTimeout(() => {
-			fn(...args);
-		}, delay);
-	};
+  let timerId;
+  return (...args) => {
+    clearTimeout(timerId);
+    timerId = setTimeout(() => {
+      fn(...args);
+    }, delay);
+  };
 };
 
 /**
@@ -62,7 +62,7 @@ export const debounce = (fn: (searchTerm) => void, delay: number) => {
  *             want to retrieve.
  */
 export const getCookieValue = (name) =>
-	document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
+  document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
 
 /**
  * The `liveSearch` function fetches data from a REST API based on a given query and displays the
@@ -73,20 +73,20 @@ export const getCookieValue = (name) =>
  * @return The liveSearch function is returning a Promise.
  */
 export async function liveSearch(query): Promise<Object> {
-	// Fetch data from REST API
-	return apiFetch({
-		path: '/vsge/v2/live-search',
-		method: 'POST',
-		data: { query },
-	})
-		.then((data) => {
-			// Display results in the search results div
-			if (data) {
-				return data;
-			}
-			return false;
-		})
-		.catch((error) => {
-			console.error(error);
-		});
+  // Fetch data from REST API
+  return apiFetch({
+    path: '/vsge/v2/live-search',
+    method: 'POST',
+    data: { query },
+  })
+    .then((data) => {
+      // Display results in the search results div
+      if (data) {
+        return data;
+      }
+      return false;
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 }
