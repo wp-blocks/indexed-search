@@ -1,4 +1,4 @@
-WP-Blocks Search, a WordPress plugin.
+Indexed Search, a WordPress plugin.
 Copyright (C) 2023  The Contributors
 
 This program is free software: you can redistribute it and/or modify

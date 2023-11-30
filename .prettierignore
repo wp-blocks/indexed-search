@@ -4,5 +4,11 @@ build-module
 build-types
 coverage
 vendor
+vendor-prod
+
+composer.lock
+package-lock.json
 
 **/*.md
+
+tests/_wordpress

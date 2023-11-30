@@ -1,0 +1,10 @@
+{
+  "apiVersion": 2,
+  "name": "wp-blocks/indexed-search",
+  "title": "search",
+  "description": "An advanced search block",
+  "keywords": ["block", "search"],
+  "category": "media",
+  "editorScript": "file:./editor.js",
+  "viewScript": "file:./frontend.js"
+}

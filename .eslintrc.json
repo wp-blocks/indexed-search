@@ -1,8 +1,7 @@
 {
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": true,
-    "tsconfigRootDir": "."
+    "project": ["./tsconfig.json", "./tsconfig.eslint.json"]
   },
   "extends": ["plugin:@wordpress/eslint-plugin/recommended"],
   "rules": {
@@ -48,7 +47,7 @@
     "import/resolver": {
       "typescript": {
         "alwaysTryTypes": true,
-        "project": ["./tsconfig.eslint.json"]
+        "project": ["./tsconfig.json", "./tsconfig.eslint.json"]
       }
     }
   },

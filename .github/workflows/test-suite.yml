@@ -1,0 +1,54 @@
+name: Test Suite
+
+on: [push, workflow_dispatch]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        test: ["unit", "acceptance"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install dependenices
+        uses: ./.github/actions/install
+
+      - name: Setup environment
+        shell: bash
+        run: |
+          envsubst < tests/.env.example > tests/.env
+
+      - name: Cache Docker images.
+        uses: ScribeMD/docker-cache@0.3.6
+        with:
+          key: docker-${{ runner.os }}-${{ hashFiles('docker-compose.yml') }}
+
+      - name: Setup docker
+        shell: bash
+        run: sudo ./bin/init-pipeline.sh
+
+      - name: Build testing files
+        shell: bash
+        run: bin/test-build.sh
+
+      - name: Run unit tests
+        if: matrix.test != 'acceptance'
+        run: bin/test-run.sh ${{ matrix.test }}
+
+      - name: Run acceptance tests
+        if: matrix.test == 'acceptance'
+        run: php ./vendor/bin/codecept run acceptance
+
+      - name: Upload codeception output
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v2.2.1
+        with:
+          name: "${{ matrix.test }}-output"
+          path: "./tests/_output"
+
+      - name: Stop testing container
+        shell: bash
+        run: bin/test-down.sh
