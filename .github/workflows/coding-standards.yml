@@ -1,0 +1,40 @@
+name: Coding Standards
+
+on:
+  pull_request:
+    branches: [main, epic/*]
+  workflow_dispatch:
+
+jobs:
+  lint:
+    name: Check Coding Standards
+    runs-on: ubuntu-latest
+    environment: testing
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install dependenices
+        uses: ./.github/actions/install
+
+      - name: Generate testing files
+        shell: bash
+        run: |
+          envsubst < tests/.env.example > tests/.env
+          php vendor/bin/codecept build
+
+      - name: Lint PHP
+        shell: bash
+        run: |
+          composer run-script lint
+          composer run-script analyze
+
+      - name: Lint JavaScript
+        shell: bash
+        run: |
+          npm run lint:js
+          npm run check
+
+      - name: Lint Styles
+        shell: bash
+        run: npm run lint:css

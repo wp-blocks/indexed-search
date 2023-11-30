@@ -16,6 +16,7 @@ artifacts
 # Dependency directories
 node_modules/
 vendor/
+vendor-prod/
 
 # Optional npm cache directory
 .npm
@@ -36,7 +37,15 @@ vendor/
 .idea
 .vscode
 
+# Local config files
+.php-cs-fixer.php
+codeception.yml
+phpstan.neon
+
 # Cache files
 .phpunit.cache
 .phpunit.result.cache
 .php-cs-fixer.cache
+
+# Testing artifacts
+tests/_wordpress

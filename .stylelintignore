@@ -1,0 +1,13 @@
+.cache
+build
+build-module
+build-types
+
+tests
+coverage
+
+vendor
+vendor-prod
+node_modules
+
+tests/_wordpress

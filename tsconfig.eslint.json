@@ -5,11 +5,10 @@
     "allowJs": true
   },
   "include": [
-    ".eslintrc.cjs",
     ".prettierrc.cjs",
-    "jest.config.base.cjs",
+    "babel.config.cjs",
     "jest.config.cjs",
-    "lint-staged.config.cjs",
+    "lint-staged.config.js",
     "webpack.config.cjs"
   ]
 }

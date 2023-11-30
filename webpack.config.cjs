@@ -1,17 +1,7 @@
-const path = require('path');
-
 const defaultConfig = require('@wordpress/scripts/config/webpack.config');
 
 module.exports = {
   ...defaultConfig,
-  entry: {
-    'search-block': path.resolve(
-      process.cwd(),
-      'client',
-      'src',
-      'frontend.tsx'
-    ),
-  },
   devtool: 'inline-source-map',
   module: {
     rules: [

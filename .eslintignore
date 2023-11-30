@@ -4,3 +4,6 @@ build-module
 build-types
 coverage
 vendor
+vendor-prod
+
+tests/_wordpress
