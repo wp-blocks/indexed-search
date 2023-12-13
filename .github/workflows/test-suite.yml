@@ -27,11 +27,11 @@ jobs:
 
       - name: Setup docker
         shell: bash
-        run: sudo ./bin/init-pipeline.sh
+        run: sudo bin/test-up.sh
 
       - name: Build testing files
         shell: bash
-        run: bin/test-build.sh
+        run: php vendor/bin/codecept build
 
       - name: Run unit tests
         if: matrix.test != 'acceptance'
@@ -39,7 +39,7 @@ jobs:
 
       - name: Run acceptance tests
         if: matrix.test == 'acceptance'
-        run: php ./vendor/bin/codecept run acceptance
+        run: php vendor/bin/codecept run acceptance
 
       - name: Upload codeception output
         if: ${{ failure() }}
