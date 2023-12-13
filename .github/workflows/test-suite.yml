@@ -18,8 +18,7 @@ jobs:
 
       - name: Setup environment
         shell: bash
-        run: |
-          envsubst < tests/.env.example > tests/.env
+        run: envsubst < tests/.env.example > tests/.env
 
       - name: Cache Docker images.
         uses: ScribeMD/docker-cache@0.3.6

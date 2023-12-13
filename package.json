@@ -20,7 +20,8 @@
     "start": "wp-scripts start",
     "format": "wp-scripts format ./client/src",
     "lint:css": "wp-scripts lint-style",
-    "lint:js": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "lint:js": "eslint --ext .js,.jsx,.cjs,.mjs,.ts,.tsx .",
+    "check": "tsc -b",
     "test": "jest --silent=false --coverage",
     "prepare": "husky install"
   },
@@ -65,6 +66,9 @@
     "extends": [
       "@wordpress/stylelint-config",
       "@wordpress/stylelint-config/scss"
-    ]
+    ],
+    "rules": {
+      "indentation": 2
+    }
   }
 }

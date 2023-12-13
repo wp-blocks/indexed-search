@@ -5,7 +5,6 @@
     "outDir": "./build-types",
 
     "strict": true,
-    "declarationMap": true,
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
     "pretty": true,

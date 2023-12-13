@@ -75,16 +75,19 @@
       "@strauss"
     ],
     "strauss": [
-      "vendor/bin/strauss"
+      "@php vendor/bin/strauss"
     ],
-    "test": [
-      "vendor/bin/codecept run acceptance,unit"
+    "test:acceptance": [
+      "@php vendor/bin/codecept run acceptance"
     ],
-    "test:analyze": [
-      "vendor/bin/phpstan analyze --memory-limit=4G --ansi"
+    "analyze": [
+      "@php vendor/bin/phpstan analyse --memory-limit=4G --no-progress --no-interaction --ansi"
+    ],
+    "lint": [
+      "@php vendor/bin/php-cs-fixer check --config=.php-cs-fixer.dist.php --ansi"
     ],
     "lint:fix": [
-      "vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php --ansi"
+      "@php vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php --ansi"
     ]
   },
   "scripts-descriptions": {
