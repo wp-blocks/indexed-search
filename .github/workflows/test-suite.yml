@@ -1,6 +1,9 @@
 name: Test Suite
 
-on: [push, workflow_dispatch]
+on:
+  pull_request:
+    branches: [main, epic/*]
+  workflow_dispatch:
 
 jobs:
   test:
