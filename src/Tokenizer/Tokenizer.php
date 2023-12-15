@@ -10,10 +10,10 @@ class Tokenizer
 
     private int $cursor = 0;
 
-    public function __construct($text)
+    public function __construct(string $text)
     {
-        Str::splitOnWhitespace($text);
         $this->text = $text;
+        Str::splitWords($this->text);
     }
 
     public function getToken(): Token

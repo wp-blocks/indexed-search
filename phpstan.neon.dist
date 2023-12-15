@@ -13,3 +13,7 @@ parameters:
     scanDirectories:
         - tests
         - vendor-prod
+    excludePaths:
+        - src/Compat/WP_HTML_Tag_Processor.php
+        - src/Stemmer/*
+        - tests/*/_wordpress/*

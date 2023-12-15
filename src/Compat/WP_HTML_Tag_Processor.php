@@ -1,6 +1,6 @@
 <?php
 
-namespace WpBlocks\Search\Tokenizer;
+namespace WpBlocks\Search\Compat;
 
 use WP_HTML_Attribute_Token;
 use WP_HTML_Span;
@@ -53,7 +53,7 @@ use WP_HTML_Text_Replacement;
  *    no-ambiguous-ampersand rule, and it improperly handles the way semicolons may
  *    or may not terminate a character reference.
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage HTML-API
  *
  * @since 6.2.0
@@ -715,7 +715,9 @@ class WP_HTML_Tag_Processor
      */
     public function class_list()
     {
-        /** @var string $class contains the string value of the class attribute, with character references decoded. */
+        /**
+         * @var string $class contains the string value of the class attribute, with character references decoded.
+         */
         $class = $this->get_attribute('class');
 
         if (!is_string($class)) {
@@ -912,7 +914,7 @@ class WP_HTML_Tag_Processor
      * Skips contents of generic rawtext elements.
      *
      * @since 6.3.2
-     * @see https://html.spec.whatwg.org/#generic-raw-text-element-parsing-algorithm
+     * @see   https://html.spec.whatwg.org/#generic-raw-text-element-parsing-algorithm
      *
      * @param string $tag_name The uppercase tag name which will close the RAWTEXT region.
      *
@@ -932,7 +934,7 @@ class WP_HTML_Tag_Processor
      * Skips contents of RCDATA elements, namely title and textarea tags.
      *
      * @since 6.2.0
-     * @see https://html.spec.whatwg.org/multipage/parsing.html#rcdata-state
+     * @see   https://html.spec.whatwg.org/multipage/parsing.html#rcdata-state
      *
      * @param string $tag_name The uppercase tag name which will close the RCDATA region.
      *
@@ -1518,8 +1520,8 @@ class WP_HTML_Tag_Processor
      * (they are accumulated in different data formats for performance).
      *
      * @since 6.2.0
-     * @see WP_HTML_Tag_Processor::$lexical_updates
-     * @see WP_HTML_Tag_Processor::$classname_updates
+     * @see   WP_HTML_Tag_Processor::$lexical_updates
+     * @see   WP_HTML_Tag_Processor::$classname_updates
      */
     private function class_name_updates_to_attributes_updates()
     {
@@ -1551,7 +1553,6 @@ class WP_HTML_Tag_Processor
          * attribute, skipping removed classes on the way, and then appending
          * added classes at the end. Only when finished processing will the
          * value contain the final new value.
-
          *
          * @var string $class
          */
@@ -1999,7 +2000,7 @@ class WP_HTML_Tag_Processor
      *     $p->get_attribute_names_with_prefix( 'data-' ) === null;
      *
      * @since 6.2.0
-     * @see https://html.spec.whatwg.org/multipage/syntax.html#attributes-2:ascii-case-insensitive
+     * @see   https://html.spec.whatwg.org/multipage/syntax.html#attributes-2:ascii-case-insensitive
      *
      * @param string $prefix Prefix of requested attribute names.
      *
@@ -2374,7 +2375,7 @@ class WP_HTML_Tag_Processor
      * Returns the string representation of the HTML Tag Processor.
      *
      * @since 6.2.0
-     * @see WP_HTML_Tag_Processor::get_updated_html()
+     * @see   WP_HTML_Tag_Processor::get_updated_html()
      *
      * @return string The processed HTML.
      */
@@ -2566,5 +2567,28 @@ class WP_HTML_Tag_Processor
         }
 
         return true;
+    }
+
+    /**
+     * Modifications by WpBlocks\Search
+     */
+    public function get_token_starts_at()
+    {
+        return $this->token_starts_at;
+    }
+
+    public function get_token_ends_at()
+    {
+        return $this->token_starts_at + $this->token_length;
+    }
+
+    public function get_is_closing_tag()
+    {
+        return $this->is_closing_tag;
+    }
+
+    public function substr(int $offset, ?int $length = null)
+    {
+        return substr($this->html, $offset, $length);
     }
 }
