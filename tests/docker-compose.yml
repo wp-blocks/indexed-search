@@ -29,9 +29,9 @@ services:
           "--fail",
           "http://localhost:80",
         ]
-      interval: 1s
-      timeout: 1s
-      retries: 30
+      interval: 30s
+      timeout: 30s
+      retries: 3
 
     tmpfs:
       - /var/www/html
@@ -60,9 +60,9 @@ services:
 
     healthcheck:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
-      interval: 1s
-      timeout: 1s
-      retries: 30
+      interval: 30s
+      timeout: 30s
+      retries: 3
 
     tmpfs:
       - /var/lib/mysql
