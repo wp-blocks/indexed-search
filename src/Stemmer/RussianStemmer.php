@@ -1,6 +1,6 @@
 <?php
 
-namespace WpBlocks\Search\Stemmer;
+namespace IndexedSearch\Stemmer;
 
 /*
  * Simple stemmer for russian language originally written by Nenad Tičarić

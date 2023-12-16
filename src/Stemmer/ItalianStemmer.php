@@ -1,6 +1,6 @@
 <?php
 
-namespace WpBlocks\Search\Stemmer;
+namespace IndexedSearch\Stemmer;
 
 /*
  *  The following code, downloaded from <https://www.drupal.org/project/italianstemmer>,

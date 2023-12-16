@@ -1,6 +1,6 @@
 <?php
 
-namespace WpBlocks\Search\Stemmer;
+namespace IndexedSearch\Stemmer;
 
 /*
  *  This program is free software: you can redistribute it and/or modify
@@ -515,7 +515,7 @@ class PortugueseStemmer implements Stemmer
      *
      * @author <bmorel@ssi.fr>
      *
-     * @link   http://www.php.net/manual/en/function.utf8-encode.php
+     * @link http://www.php.net/manual/en/function.utf8-encode.php
      */
     private static function check($str)
     {
@@ -567,8 +567,8 @@ class PortugueseStemmer implements Stemmer
      *
      * @author <chernyshevsky at hotmail dot com>
      *
-     * @see    strlen()
-     * @see    utf8_decode()
+     * @see strlen()
+     * @see utf8_decode()
      */
     private static function strlen($string)
     {
@@ -580,8 +580,8 @@ class PortugueseStemmer implements Stemmer
      *
      * @author lmak at NOSPAM dot iti dot gr
      *
-     * @link   http://www.php.net/manual/en/function.substr.php
-     * @see    substr()
+     * @link http://www.php.net/manual/en/function.substr.php
+     * @see  substr()
      */
     private static function substr($str, $start, $length = null)
     {
@@ -600,7 +600,7 @@ class PortugueseStemmer implements Stemmer
      *
      * @author Harry Fuecks <hfuecks@gmail.com>
      *
-     * @see    strreplace();
+     * @see strreplace();
      */
     private static function str_replace($s, $r, $str)
     {
@@ -621,8 +621,8 @@ class PortugueseStemmer implements Stemmer
      *
      * @author Andreas Gohr <andi@splitbrain.org>
      *
-     * @see    strtolower()
-     * @see    utf8_strtoupper()
+     * @see strtolower()
+     * @see utf8_strtoupper()
      */
     private static function strtolower($string)
     {
@@ -648,8 +648,8 @@ class PortugueseStemmer implements Stemmer
      *
      * @author Scott Michael Reynen <scott@randomchaos.com>
      *
-     * @link   http://www.randomchaos.com/document.php?source=php_and_unicode
-     * @see    unicode_to_utf8()
+     * @link http://www.randomchaos.com/document.php?source=php_and_unicode
+     * @see  unicode_to_utf8()
      */
     private static function utf8_to_unicode(&$str)
     {
@@ -685,8 +685,8 @@ class PortugueseStemmer implements Stemmer
      *
      * @author Scott Michael Reynen <scott@randomchaos.com>
      *
-     * @link   http://www.randomchaos.com/document.php?source=php_and_unicode
-     * @see    utf8_to_unicode()
+     * @link http://www.randomchaos.com/document.php?source=php_and_unicode
+     * @see  utf8_to_unicode()
      */
     private static function unicode_to_utf8(&$str)
     {
@@ -717,7 +717,7 @@ class PortugueseStemmer implements Stemmer
      *
      * @author Harry Fuecks <hfuecks@gmail.com>
      *
-     * @see    strpos()
+     * @see strpos()
      */
     private static function strrpos($haystack, $needle, $offset = 0)
     {
@@ -752,7 +752,7 @@ class PortugueseStemmer implements Stemmer
      *
      * @author Harry Fuecks <hfuecks@gmail.com>
      *
-     * @see    explode();
+     * @see explode();
      */
     private static function explode($sep, $str)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace WpBlocks\Search\Tokenizer;
+namespace IndexedSearch\Tokenizer;
 
 class Token
 {

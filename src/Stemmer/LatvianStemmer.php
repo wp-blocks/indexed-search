@@ -1,6 +1,6 @@
 <?php
 
-namespace WpBlocks\Search\Stemmer;
+namespace IndexedSearch\Stemmer;
 
 /*
  * Light stemmer for Latvian.

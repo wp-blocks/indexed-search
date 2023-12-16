@@ -1,5 +1,5 @@
 {
-  "name": "@wp-blocks/search",
+  "name": "@wp-blocks/indexed-search",
   "description": "An advanced WordPress indexed search plugin",
   "private": true,
   "type": "module",
@@ -7,12 +7,12 @@
     "Erik Golinelli <erik@codekraft.it> (https://codekraft.it/)",
     "John Hooks <bitmachina@outlook.com> (https://johnhooks.io/)"
   ],
-  "homepage": "https://github.com/wp-blocks/search#readme",
+  "homepage": "https://github.com/wp-blocks/indexed-search#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wp-blocks/search.git"
+    "url": "https://github.com/wp-blocks/indexed-search.git"
   },
-  "bugs": "https://github.com/wp-blocks/search/issues",
+  "bugs": "https://github.com/wp-blocks/indexed-search/issues",
   "license": "GPL-2.0-or-later",
   "scripts": {
     "packages-update": "wp-scripts packages-update",

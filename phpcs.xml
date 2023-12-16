@@ -38,6 +38,12 @@
   </rule>
 
   <rule ref="Generic.Commenting.DocComment.ParamNotFirst">
+    <exclude-pattern>src/*</exclude-pattern>
+    <exclude-pattern>tests/*</exclude-pattern>
+    <exclude-pattern>indexed-search.php</exclude-pattern>
+  </rule>
+
+  <rule ref="Generic.Commenting.DocComment.ParamNotFirst">
     <exclude-pattern>src/Tokenizer/WP_HTML_Tag_Processor.php</exclude-pattern>
   </rule>
 

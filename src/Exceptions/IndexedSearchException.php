@@ -1,6 +1,6 @@
 <?php
 
-namespace WpBlocks\Search\Exceptions;
+namespace IndexedSearch\Exceptions;
 
 use Exception;
 

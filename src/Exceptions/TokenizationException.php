@@ -1,5 +1,5 @@
 <?php
 
-namespace WpBlocks\Search\Exceptions;
+namespace IndexedSearch\Exceptions;
 
 class TokenizationException extends IndexedSearchException {}

@@ -1,6 +1,6 @@
 <?php
 
-namespace Wpx\Search\Contracts;
+namespace IndexedSearch\Search\Contracts;
 
 interface Runnable
 {
