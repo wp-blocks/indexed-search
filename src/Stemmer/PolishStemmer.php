@@ -1,6 +1,6 @@
 <?php
 
-namespace WpBlocks\Search\Stemmer;
+namespace IndexedSearch\Stemmer;
 
 /*
  * @link https://github.com/Tutanchamon/pl_stemmer

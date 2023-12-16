@@ -1,6 +1,6 @@
 <?php
 
-namespace WpBlocks\Search\Stemmer;
+namespace IndexedSearch\Stemmer;
 
 /*
  * Copyright (c) 2013 Aris Buzachis (buzachis.aris@gmail.com)

@@ -1,8 +1,8 @@
 <?php
 
-namespace WpBlocks\Search\Tokenizer;
+namespace IndexedSearch\Tokenizer;
 
-use WpBlocks\Search\Helpers\Str;
+use IndexedSearch\Helpers\Str;
 
 class Tokenizer
 {

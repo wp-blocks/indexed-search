@@ -1,6 +1,6 @@
 <?php
 
-namespace WpBlocks\Search\Helpers;
+namespace IndexedSearch\Helpers;
 
 class Str
 {
@@ -18,7 +18,7 @@ class Str
         $result = preg_split('/\s+/', $text, -1, PREG_SPLIT_NO_EMPTY);
 
         if ($result === false) {
-            throw new \WpBlocks\Search\Exceptions\TokenizationException();
+            throw new \IndexedSearch\Exceptions\TokenizationException();
         }
 
         return $result;
@@ -32,7 +32,7 @@ class Str
         $result = preg_split(self::$splitWordsPattern, $text, -1, PREG_SPLIT_NO_EMPTY);
 
         if ($result === false) {
-            throw new \WpBlocks\Search\Exceptions\TokenizationException();
+            throw new \IndexedSearch\Exceptions\TokenizationException();
         }
 
         return $result;

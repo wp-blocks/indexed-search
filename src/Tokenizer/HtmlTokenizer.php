@@ -1,9 +1,9 @@
 <?php
 
-namespace WpBlocks\Search\Tokenizer;
+namespace IndexedSearch\Tokenizer;
 
-use WpBlocks\Search\Compat\WP_HTML_Tag_Processor;
-use WpBlocks\Search\Helpers\Str;
+use IndexedSearch\Compat\WP_HTML_Tag_Processor;
+use IndexedSearch\Helpers\Str;
 
 class HtmlTokenizer
 {

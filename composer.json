@@ -1,5 +1,5 @@
 {
-  "name": "wp-blocks/search",
+  "name": "wp-blocks/indexed-search",
   "description": "An advanced WordPress indexed search plugin",
   "type": "project",
   "license": "GPL-2-or-later",
@@ -59,7 +59,7 @@
   },
   "autoload": {
     "psr-4": {
-      "WpBlocks\\Search\\": "src/"
+      "IndexedSearch\\": "src/"
     }
   },
   "autoload-dev": {
@@ -99,9 +99,9 @@
   "extra": {
     "strauss": {
       "target_directory": "vendor-prod",
-      "namespace_prefix": "WpBlocks\\Search\\",
-      "classmap_prefix": "WpBlocks_Search_",
-      "constant_prefix": "WPBLOCKS_SEARCH_",
+      "namespace_prefix": "IndexedSearch\\",
+      "classmap_prefix": "Indexed_Search_",
+      "constant_prefix": "INDEXED_SEARCH_",
       "delete_vendor_files": true,
       "packages": [],
       "exclude_from_copy": {

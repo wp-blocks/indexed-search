@@ -1,6 +1,6 @@
 <?php
 
-namespace WpBlocks\Search\Support;
+namespace IndexedSearch\Support;
 
 interface TokenizerInterface
 {

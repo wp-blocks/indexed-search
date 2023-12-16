@@ -1,6 +1,6 @@
 <?php
 
-namespace WpBlocks\Search\Compat;
+namespace IndexedSearch\Compat;
 
 use WP_HTML_Attribute_Token;
 use WP_HTML_Span;
@@ -2570,7 +2570,7 @@ class WP_HTML_Tag_Processor
     }
 
     /**
-     * Modifications by WpBlocks\Search
+     * Modifications by IndexedSearch
      */
     public function get_token_starts_at()
     {

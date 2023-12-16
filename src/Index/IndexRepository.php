@@ -1,6 +1,6 @@
 <?php
 
-namespace WpBlocks\Search\Index\IndexRepository;
+namespace IndexedSearch\Index\IndexRepository;
 
 interface IndexRepository
 {

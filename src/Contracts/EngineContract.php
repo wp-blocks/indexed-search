@@ -1,6 +1,6 @@
 <?php
 
-namespace WpBlocks\Search\Contracts;
+namespace IndexedSearch\Contracts;
 
 interface EngineContract
 {
