@@ -5,13 +5,12 @@
     "outDir": "./build-types",
 
     "strict": true,
-    "declarationMap": true,
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
     "pretty": true,
 
     "typeRoots": ["./node_modules/@types"]
   },
-  "include": ["./client/src/**/*", "./src/block.json"],
+  "include": ["./client/src/**/*", "./client/src/block.json"],
   "exclude": ["**/*.test.ts"]
 }

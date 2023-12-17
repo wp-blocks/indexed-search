@@ -1,0 +1,39 @@
+name: Install dependencies
+description: Setup Node.js, Composer, and install dependencies
+
+runs:
+  using: "composite"
+  steps:
+    - name: Cache Composer packages
+      id: composer-cache
+      uses: actions/cache@v3
+      with:
+        path: |
+          vendor
+          vendor-prod
+        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+
+    - name: Composer install
+      uses: php-actions/composer@v6
+      with:
+        php_version: "8.2"
+        version: 2.x
+        dev: yes
+        args: --optimize-autoloader --ignore-platform-reqs
+
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version-file: .nvmrc
+        cache: npm
+        cache-dependency-path: package-lock.json
+
+    - name: NPM install
+      shell: bash
+      run: npm ci --ignore-scripts
+
+    - name: Build NPM dependencies
+      shell: bash
+      run: npm rebuild && npm run prepare --if-present

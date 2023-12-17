@@ -7,11 +7,11 @@ import { debounce, hideSpinner, liveSearch, showSpinner } from './utils';
  * The `initLiveSearch` function initializes a live search functionality for a search input element in
  * a React TypeScript application.
  *
- * @param searchBlock - The `searchBlock` parameter is the HTML element that contains the search input
+ * @param searchBlock The `searchBlock` parameter is the HTML element that contains the search input
  *                    field and the search results. It is the parent element that holds all the elements related to the
  *                    search functionality.
  */
-export function initLiveSearch(searchBlock) {
+export function initLiveSearch(searchBlock: Element) {
   let searchResultsWrapper: HTMLElement;
   let isWrapperFocused = false;
   let hasResultsWrapper = false;
@@ -22,7 +22,7 @@ export function initLiveSearch(searchBlock) {
   /**
    * The function appends a search results wrapper to a search input element and returns the wrapper.
    *
-   * @param {HTMLInputElement} input - The input parameter is an HTMLInputElement, which represents an
+   * @param {HTMLInputElement} input The input parameter is an HTMLInputElement, which represents an
    *                                 input element in an HTML form.
    * @return the searchResultsWrapper, which is a newly created div element with the class
    * 'search-results'.

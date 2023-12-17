@@ -9,9 +9,11 @@ use PhpCsFixer\Finder;
 // allows using the latest version of the rules.
 
 $finder = Finder::create()
+    ->notPath(['WP_HTML_Tag_Processor.php'])
+    ->exclude(['vendor', 'vendor-prod', '_support/_generated', '_wordpress'])
     ->in([
-        __DIR__ . '/server/src',
-        __DIR__ . '/server/tests',
+        __DIR__ . '/src',
+        __DIR__ . '/tests',
     ])
     ->name('*.php')
     ->ignoreDotFiles(true)

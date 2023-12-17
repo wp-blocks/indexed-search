@@ -1,0 +1,4 @@
+# Unit Test Suite Configuration
+
+bootstrap: _bootstrap.php
+modules:
