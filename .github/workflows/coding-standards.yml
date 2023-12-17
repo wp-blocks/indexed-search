@@ -1,8 +1,8 @@
 name: Coding Standards
 
 on:
-  pull_request:
-    branches: [main, epic/*]
+  # pull_request:
+  #   branches: [main, epic/*]
   workflow_dispatch:
 
 jobs:
